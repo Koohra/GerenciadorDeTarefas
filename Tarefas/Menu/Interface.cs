@@ -12,11 +12,12 @@ namespace Sistema.Menu
     {
         public static void MenuTechLeader(Usuario techLeader)
         {
+            EstatisticasTarefas estatisticasTarefas = new EstatisticasTarefas();
             GerenciarTarefa gerenciarTarefa = new GerenciarTarefa();
             Console.Clear();
             Console.WriteLine("\nSelecione a ação desejada:");
             Console.WriteLine("1-Criar uma tarefa \n2-Ver tarefas para aprovar \n3-Aprovar tarefa " +
-                "\n4-Exibir todas as tarefas \n5-Assumir tarefa \n6-Adicionar prazo na tarefa");
+                "\n4-Exibir todas as tarefas \n5-Assumir tarefa \n6-Adicionar prazo na tarefa \n7-Estatisticas das tarefas.");
             int acao;
             while (!int.TryParse(Console.ReadLine(), out acao))
             {
@@ -61,7 +62,7 @@ namespace Sistema.Menu
                     return;
 
                 case 5:
-                    Console.WriteLine("Insira o ID da tarefa que deseja assumir:");
+                    Console.WriteLine("Insira o ID da tarefa que deseja assumir ou trocar o responsável:");
                     if (int.TryParse(Console.ReadLine(), out int TarefaId))
                     {
                         Console.WriteLine("Insira o nome do novo responsável:");
@@ -96,6 +97,13 @@ namespace Sistema.Menu
                     {
                         Console.WriteLine("ID inválido. Digite um número válido para o ID da tarefa.");
                     }
+                    Console.WriteLine($"\nPrecione [ENTER] para voltar");
+                    Console.ReadLine();
+                    MenuTechLeader(techLeader);
+                    return;
+
+                case 7:
+                    estatisticasTarefas.ExibirPorcentagemPorStatus();
                     Console.WriteLine($"\nPrecione [ENTER] para voltar");
                     Console.ReadLine();
                     MenuTechLeader(techLeader);

@@ -19,7 +19,6 @@ namespace Sistema.Tarefas1
             Caminho = Caminho.Replace("InterfaceInicial\\bin\\Debug\\net8.0", "Tarefas\\Tarefas1");
         }
         
-        //LerJasonTarefas retorna uma lista com os objetos do json
         public List<Tarefa>? LerJsonTarefas()
         {
             try
@@ -47,12 +46,9 @@ namespace Sistema.Tarefas1
         {
             try
             {
-                if (File.Exists(Caminho)) // conferir se vai dar erro
+                if (File.Exists(Caminho))
                 {
-                    // Serializa a lista de professores de volta para o formato JSON
                     string json = JsonConvert.SerializeObject(tarefas, Formatting.Indented);
-
-                    // Escreve o JSON de volta no arquivo
                     File.WriteAllText(Caminho, json);
 
                     Console.WriteLine("Alterações salvas com sucesso no arquivo JSON.");
@@ -84,48 +80,3 @@ namespace Sistema.Tarefas1
         }
     }
 }
-
-
-//    public string Caminho { get; set; }
-
-//    public TarefaService(string arquivo = "Tarefas.json")
-//    {
-//        string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-//        string path = Path.Combine(baseDirectory, "Tarefas1", arquivo);
-//        Caminho = path.Replace("InterfaceInicial\\bin\\Debug\\net8.0", "Tarefas\\Tarefas1");
-//        Console.WriteLine(Caminho);
-//    }
-
-//    public void SalvarTarefa(Tarefa tarefa, string arquivo = "Tarefas.json")
-//    {
-//        string caminhoCompleto = Path.Combine(Caminho, arquivo);
-//        string jsonString = JsonSerializer.Serialize(tarefa);
-//        File.WriteAllText(caminhoCompleto, jsonString);
-//    }
-
-//    public Tarefa CarregarTarefa(string arquivo = "Tarefas.json")
-//    {
-//        string caminhoCompleto = Path.Combine(Caminho, arquivo);
-
-//        if (!File.Exists(caminhoCompleto))
-//        {
-//            return null;
-//        }
-
-//        string jsonLido = File.ReadAllText(caminhoCompleto);
-//        return JsonSerializer.Deserialize<Tarefa>(jsonLido);
-//    }
-
-//    public List<Tarefa> CarregarListaTarefas(string arquivo = "Tarefas.json")
-//    {
-//        string caminhoCompleto = Path.Combine(Caminho, arquivo);
-
-//        if (!File.Exists(caminhoCompleto))
-//        {
-//            return new List<Tarefa>();
-//        }
-
-//        string jsonLido = File.ReadAllText(caminhoCompleto);
-//        return JsonSerializer.Deserialize<List<Tarefa>>(jsonLido);
-//    }
-//}

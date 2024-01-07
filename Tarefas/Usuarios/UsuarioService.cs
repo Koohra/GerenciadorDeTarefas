@@ -47,12 +47,9 @@ namespace Sistema.Usuarios
         {
             try
             {
-                if (File.Exists(Caminho)) // conferir se vai dar erro
+                if (File.Exists(Caminho))
                 {
-                    // Serializa a lista de professores de volta para o formato JSON
                     string json = JsonConvert.SerializeObject(usuario, Formatting.Indented);
-
-                    // Escreve o JSON de volta no arquivo
                     File.WriteAllText(Caminho, json);
 
                     Console.WriteLine("Alterações salvas com sucesso no arquivo JSON.");
@@ -69,119 +66,3 @@ namespace Sistema.Usuarios
         }
     }
 }
-
-        //public UsuarioService(string arquivoJson = "Usuarios.json")
-        //{
-        //    string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-        //    string caminhoUsuarios = Path.Combine(baseDirectory, "Usuarios", arquivoJson);
-        //    Caminho = caminhoUsuarios.Replace("InterfaceInicial\\bin\\Debug\\net8.0", "Tarefas");
-        //    listaDesenvolvedores = InicializarUsuarios().Item1;
-        //    listaTechLeaders = InicializarUsuarios().Item2;
-        //}
-
-        //private(List<Desenvolvedor>, List<TechLeader>) InicializarUsuarios()
-        //{
-        //    try
-        //    {
-        //        string json = File.ReadAllText(Caminho);
-        //        Desenvolvedor[] arrayUsuarios = JsonConvert.DeserializeObject<Desenvolvedor[]>(json);
-        //        List<Desenvolvedor> ListaDesenvolvedores = arrayUsuarios.Where(usuario => usuario.Cargo == Cargo.Desenvolvedor).ToList();
-
-        //        TechLeader[] arrayUsuarios2 = JsonConvert.DeserializeObject<TechLeader[]>(json);
-        //        List<TechLeader> ListaTechLeaders = arrayUsuarios2.Where(techleader => techleader.Cargo == Cargo.TechLeader).ToList();
-
-        //        return (ListaDesenvolvedores, ListaTechLeaders);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine("Ocorreu um erro na inicialização dos usuários: " + ex.Message);
-        //        return (null, null);
-        //    }
-        //}
-        //    public void LerTodosDesenvolvedores()
-        //    {
-        //        try
-        //        {
-        //            foreach (var desenvolvedor in listaDesenvolvedores)
-        //            {
-        //                desenvolvedor.ExibirInformacoes();
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            Console.WriteLine("Ocorreu um erro ao exibir os detalhes dos funcionários: " + ex.Message);
-        //        }
-        //    }
-
-        //    public void LerTodosTechLeaders()
-        //    {
-        //        try
-        //        {
-        //            foreach (var techLeader in listaTechLeaders)
-        //            {
-        //                techLeader.ExibirInformacoes();
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            Console.WriteLine("Ocorreu um erro ao exibir os detalhes dos funcionários: " + ex.Message);
-        //        }
-        //    }
-
-//public LerUsuarioCSV()
-//{
-//    Caminho = Caminho.Replace("InterfaceUsuario\\bin\\Debug\\net8.0", "GerenciadorDeTarefas");
-//    listaDesenvolvedores = InicializarUsuarios2().Item1;
-//    listaTechLeaders = InicializarUsuarios2().Item2;
-//}
-//internal class UsuarioService
-//{
-//    private string Caminho = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Usuarios", "Usuarios.json");
-//    private (List<Desenvolvedor>, List<TechLeader>) listaUsuario;
-
-//    public UsuarioService()
-//    {
-//        Caminho = Caminho.Replace("InterfaceUsuario\\bin\\Debug\\net8.0", "Sistema");
-//        listaUsuario = InicializarUsuarios();
-//    }
-
-//    private (List<Desenvolvedor>, List<TechLeader>) InicializarUsuarios()
-//    {
-//        try
-//        {
-//            string json = File.ReadAllText(Caminho);
-//            Desenvolvedor[] arrayUsuarios = JsonConvert.DeserializeObject<Desenvolvedor[]>(json);
-//            List<Desenvolvedor> ListaDesenvolvedores = arrayUsuarios.Where(usuario => usuario.Cargo == Cargo.Desenvolvedor).ToList();
-
-//            TechLeader[] arrayUsuarios2 = JsonConvert.DeserializeObject<TechLeader[]>(json);
-//            List<TechLeader> ListaTechLeaders = arrayUsuarios2.Where(techleader => techleader.Cargo == Cargo.TechLeader).ToList();
-
-//            return (ListaDesenvolvedores, ListaTechLeaders);
-//        }
-//        catch (Exception ex)
-//        {
-//            Console.WriteLine("Ocorreu um erro na inicialização dos usuários: " + ex.Message);
-//            return (null, null);
-//        }
-//    }
-//}
-//    private List<Usuarios> InicializarUsuario()
-//    {
-//        try
-//        {
-//            string json = File.ReadAllText(Caminho);
-//            Usuarios[] arrayFuncionarios = JsonConvert.DeserializeObject<Usuarios[]>(json);
-//            return new List<Usuarios>(arrayFuncionarios);
-//        }
-//        catch (Exception ex)
-//        {
-//            Console.WriteLine("Ocorreu um erro na inicialização dos funcionários: " + ex.Message);
-//            return new List<Usuarios>();
-//        }
-//    }
-//}
-//internal List<Usuarios> RetornarLista()
-//{
-//    listaFuncionarios = InicializarFuncionarios();
-//    return listaFuncionarios;
-//}

@@ -13,7 +13,7 @@ namespace Sistema.Tarefas1
 
     public class Tarefa
     {
-        private static int  contadorId = 0;
+
         public int Id { get; set; }
         public DateTime Prazo { get; set; }
         public string Titulo { get; set; }
@@ -23,9 +23,9 @@ namespace Sistema.Tarefas1
         public bool Aprovada { get; set; }
         public List<int> TarefasRelacionadasIds { get; set; }
 
-        public Tarefa(string titulo, string descricao, string responsavel, DateTime prazo)
+        public Tarefa(int id, string titulo, string descricao, string responsavel, DateTime prazo)
         {
-            Id = contadorId++;
+            Id = id;
             Titulo = titulo;
             Prazo = prazo;  
             Descricao = descricao;
@@ -34,8 +34,6 @@ namespace Sistema.Tarefas1
             Aprovada = false;
             TarefasRelacionadasIds = new List<int>();
         }
-
-
     }
 }
 
