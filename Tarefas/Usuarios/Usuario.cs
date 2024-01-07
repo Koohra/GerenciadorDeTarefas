@@ -9,15 +9,13 @@ namespace Sistema.Usuarios
 {
     public class Usuario
     {
-        //private static int contadorId = 0;
-        //public int ID {  get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
         public string NomeUsuario { get; set; }
         public Cargos Cargo { get; set; }
         public string Senha { get; set; }
 
-        public Usuario(string nome, string email, Cargos cargos, string senha, string nomeUsuario)
+        public Usuario(string nome, string email, Cargos cargos, string nomeUsuario, string senha )
         {
 
             Nome = nome;
@@ -104,7 +102,13 @@ namespace Sistema.Usuarios
                 }
             }
         }
+        public void Logout()
+        {
+            Console.Clear();
+            Console.WriteLine($"{Cargo} desconectado.");
+        }
     }
+
 }
 
 

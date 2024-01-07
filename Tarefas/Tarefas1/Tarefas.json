@@ -1,80 +1,202 @@
 [
   {
+    "Id": 1,
+    "Prazo": "2023-02-15T00:00:00",
+    "Titulo": "Implementar Autenticação de Usuário",
+    "Descricao": "Desenvolver sistema de autenticação para login de usuários",
+    "Responsavel": "João",
+    "Status": 1,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
+  },
+  {
+    "Id": 2,
+    "Prazo": "2023-02-28T00:00:00",
+    "Titulo": "Criar Interface de Usuário",
+    "Descricao": "Desenhar e implementar a interface de usuário do sistema",
+    "Responsavel": "Maria",
+    "Status": 2,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
+  },
+  {
+    "Id": 3,
+    "Prazo": "2023-03-10T00:00:00",
+    "Titulo": "Configurar Servidor de Banco de Dados",
+    "Descricao": "Realizar configurações e instalações iniciais do servidor de banco de dados",
+    "Responsavel": "Pedro",
+    "Status": 3,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
+  },
+  {
+    "Id": 4,
+    "Prazo": "2023-03-15T00:00:00",
+    "Titulo": "Implementar API de Comunicação",
+    "Descricao": "Desenvolver a API REST para comunicação entre front-end e back-end",
+    "Responsavel": "Carla",
+    "Status": 4,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
+  },
+  {
     "Id": 5,
-    "Prazo": "2023-01-07T00:00:00",
-    "Titulo": "Teste",
-    "Descricao": "Testando a classe",
-    "Responsavel": "Miguel",
-    "Status": 6,
-    "Aprovada": false,
+    "Prazo": "2023-04-05T00:00:00",
+    "Titulo": "Realizar Testes de Usabilidade",
+    "Descricao": "Conduzir testes de usabilidade para avaliar a experiência do usuário",
+    "Responsavel": "José",
+    "Status": 5,
+    "Aprovada": true,
     "TarefasRelacionadasIds": []
   },
   {
     "Id": 6,
-    "Prazo": "2024-01-07T00:00:00",
-    "Titulo": "Teste Tarefas",
-    "Descricao": "Testando para ver se a lista fica atualizada",
-    "Responsavel": "Julia",
-    "Status": 7,
+    "Prazo": "2023-04-20T00:00:00",
+    "Titulo": "Otimizar Desempenho do Banco de Dados",
+    "Descricao": "Identificar e corrigir gargalos de desempenho no banco de dados",
+    "Responsavel": "Rafaela",
+    "Status": 3,
     "Aprovada": true,
-    "TarefasRelacionadasIds": [
-      8
-    ]
+    "TarefasRelacionadasIds": []
   },
   {
     "Id": 7,
-    "Prazo": "2024-01-07T00:00:00",
-    "Titulo": "Testar Id",
-    "Descricao": "Tarefa criada para saber se o funcionamento do ID esta automatico",
-    "Responsavel": "Camila",
-    "Status": 6,
-    "Aprovada": false,
-    "TarefasRelacionadasIds": [
-      9
-    ]
+    "Prazo": "2023-05-10T00:00:00",
+    "Titulo": "Desenvolver Novo Módulo do Sistema",
+    "Descricao": "Criar um novo módulo para atender aos requisitos do cliente",
+    "Responsavel": "Ana",
+    "Status": 2,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
   },
   {
     "Id": 8,
-    "Prazo": "2024-01-07T00:00:00",
-    "Titulo": "Teste do ID 2.0",
-    "Descricao": "Testar ID 2.0",
-    "Responsavel": "Miguel",
-    "Status": 6,
-    "Aprovada": false,
-    "TarefasRelacionadasIds": [
-      6
-    ]
+    "Prazo": "2023-05-25T00:00:00",
+    "Titulo": "Implementar Recursos de Segurança",
+    "Descricao": "Integrar recursos avançados de segurança no sistema",
+    "Responsavel": "Rodrigo",
+    "Status": 1,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
   },
   {
     "Id": 9,
-    "Prazo": "2024-01-07T00:00:00",
-    "Titulo": "Mais um teste",
-    "Descricao": "Testando novamente",
-    "Responsavel": "Miguel",
-    "Status": 6,
-    "Aprovada": false,
-    "TarefasRelacionadasIds": [
-      7
-    ]
-  },
-  {
-    "Id": 10,
-    "Prazo": "2024-01-07T00:00:00",
-    "Titulo": "Novo Contador",
-    "Descricao": "Testar novo contador",
-    "Responsavel": "Miguel",
+    "Prazo": "2023-06-05T00:00:00",
+    "Titulo": "Conduzir Treinamento para Novos Funcionários",
+    "Descricao": "Elaborar e ministrar treinamento para novos membros da equipe",
+    "Responsavel": "Fernanda",
     "Status": 6,
     "Aprovada": false,
     "TarefasRelacionadasIds": []
   },
   {
+    "Id": 10,
+    "Prazo": "2023-06-30T00:00:00",
+    "Titulo": "Realizar Manutenção Preventiva no Sistema",
+    "Descricao": "Analisar e corrigir possíveis problemas no sistema para prevenir falhas",
+    "Responsavel": "Lucas",
+    "Status": 4,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
+  },
+  {
     "Id": 11,
-    "Prazo": "2024-01-07T00:00:00",
-    "Titulo": "Teste do novo contador",
-    "Descricao": "novo contador na classe GerenciarTarefa",
-    "Responsavel": "Miguel",
+    "Prazo": "2023-07-15T00:00:00",
+    "Titulo": "Criar Interface de Usuário Responsiva",
+    "Descricao": "Desenvolver uma interface de usuário moderna e responsiva para a aplicação",
+    "Responsavel": "Carolina",
+    "Status": 2,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
+  },
+  {
+    "Id": 12,
+    "Prazo": "2023-08-05T00:00:00",
+    "Titulo": "Corrigir Bugs de Autenticação",
+    "Descricao": "Identificar e corrigir problemas de autenticação do usuário no sistema",
+    "Responsavel": "Gustavo",
+    "Status": 1,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
+  },
+  {
+    "Id": 13,
+    "Prazo": "2023-08-20T00:00:00",
+    "Titulo": "Implementar Integração com API Externa",
+    "Descricao": "Integrar dados de um sistema externo à aplicação atual",
+    "Responsavel": "Beatriz",
+    "Status": 3,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
+  },
+  {
+    "Id": 14,
+    "Prazo": "2023-09-10T00:00:00",
+    "Titulo": "Desenvolver Testes Automatizados",
+    "Descricao": "Criar scripts de teste automatizado para garantir a qualidade do software",
+    "Responsavel": "Eduardo",
     "Status": 6,
     "Aprovada": false,
+    "TarefasRelacionadasIds": []
+  },
+  {
+    "Id": 15,
+    "Prazo": "2023-09-25T00:00:00",
+    "Titulo": "Realizar Auditoria de Segurança",
+    "Descricao": "Conduzir uma auditoria de segurança para identificar vulnerabilidades",
+    "Responsavel": "Sophia",
+    "Status": 4,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
+  },
+  {
+    "Id": 16,
+    "Prazo": "2023-10-10T00:00:00",
+    "Titulo": "Melhorar Desempenho do Sistema",
+    "Descricao": "Analisar e otimizar o desempenho geral do sistema",
+    "Responsavel": "Bernardo",
+    "Status": 2,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
+  },
+  {
+    "Id": 17,
+    "Prazo": "2023-10-30T00:00:00",
+    "Titulo": "Atualizar Documentação do Projeto",
+    "Descricao": "Revisar e atualizar a documentação do projeto para refletir mudanças recentes",
+    "Responsavel": "Isabela",
+    "Status": 7,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
+  },
+  {
+    "Id": 18,
+    "Prazo": "2023-11-15T00:00:00",
+    "Titulo": "Realizar Reunião de Planejamento",
+    "Descricao": "Conduzir reunião para planejar os próximos passos do projeto",
+    "Responsavel": "Daniel",
+    "Status": 3,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
+  },
+  {
+    "Id": 19,
+    "Prazo": "2023-12-05T00:00:00",
+    "Titulo": "Implementar Novo Método de Criptografia",
+    "Descricao": "Integrar um novo método de criptografia para proteção de dados sensíveis",
+    "Responsavel": "Larissa",
+    "Status": 1,
+    "Aprovada": true,
+    "TarefasRelacionadasIds": []
+  },
+  {
+    "Id": 20,
+    "Prazo": "2023-12-20T00:00:00",
+    "Titulo": "Criar Relatório de Desempenho",
+    "Descricao": "Elaborar um relatório detalhado sobre o desempenho do sistema",
+    "Responsavel": "Marcela",
+    "Status": 4,
+    "Aprovada": true,
     "TarefasRelacionadasIds": []
   }
 ]

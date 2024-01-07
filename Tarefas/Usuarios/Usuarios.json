@@ -1,44 +1,73 @@
 [
-  {
-    "Nome": "Miguel",
-    "NomeUsuario": "Miguels",
-    "Email": "miguel.pereira.12@live.com",
-    "Cargo": "Desenvolvedor",
-    "Senha": "abc@123"
-  },
-  {
-    "Nome": "Ana",
-    "NomeUsuario": "Anap",
-    "Email": "ana@example.com",
-    "Cargo": "Desenvolvedor",
-    "Senha": "def@456"
-  },
-  {
-    "Nome": "Pedro",
-    "NomeUsuario": "Pedroc",
-    "Email": "pedro@example.com",
-    "Cargo": "TechLeader",
-    "Senha": "ghi@789"
-  },
-  {
-    "Nome": "João",
-    "NomeUsuario": "Joaoj",
-    "Email": "joao@example.com",
-    "Cargo": "Desenvolvedor",
-    "Senha": "jkl@012"
-  },
-  {
-    "Nome": "Maria",
-    "NomeUsuario": "Mariam",
-    "Email": "maria@example.com",
-    "Cargo": "Desenvolvedor",
-    "Senha": "mno@345"
-  },
-  {
-    "Nome": "Carlos",
-    "NomeUsuario": "Carlosc",
-    "Email": "carlos@example.com",
-    "Cargo": "TechLeader",
-    "Senha": "pqr@678"
-  }
-]
+  [
+    {
+      "Nome": "Miguel",
+      "Email": "miguel@gmail.com",
+      "NomeUsuario": "Miguelv",
+      "Cargo": 1,
+      "Senha": "123@abc"
+    },
+    {
+      "Nome": "Julia",
+      "Email": "julia@gmail.com",
+      "NomeUsuario": "Juliav",
+      "Cargo": 1,
+      "Senha": "456@def"
+    },
+    {
+      "Nome": "Camila",
+      "Email": "camila@gmail.com",
+      "NomeUsuario": "Camilav",
+      "Cargo": 1,
+      "Senha": "abc@123"
+    },
+    {
+      "Nome": "Gustavo",
+      "Email": "gustavo@gmail.com",
+      "NomeUsuario": "Gustavov",
+      "Cargo": 1,
+      "Senha": "789@ghi"
+    },
+    {
+      "Nome": "Beatriz",
+      "Email": "beatriz@gmail.com",
+      "NomeUsuario": "Beatrizv",
+      "Cargo": 2,
+      "Senha": "xyz@456"
+    },
+    {
+      "Nome": "Eduardo",
+      "Email": "eduardo@gmail.com",
+      "NomeUsuario": "Eduardov",
+      "Cargo": 1,
+      "Senha": "999@zzz"
+    },
+    {
+      "Nome": "Sophia",
+      "Email": "sophia@gmail.com",
+      "NomeUsuario": "Sophiav",
+      "Cargo": 1,
+      "Senha": "777@www"
+    },
+    {
+      "Nome": "Bernardo",
+      "Email": "bernardo@gmail.com",
+      "NomeUsuario": "Bernardov",
+      "Cargo": 1,
+      "Senha": "111@yyy"
+    },
+    {
+      "Nome": "Isabela",
+      "Email": "isabela@gmail.com",
+      "NomeUsuario": "Isabelav",
+      "Cargo": 1,
+      "Senha": "333@ttt"
+    },
+    {
+      "Nome": "Daniel",
+      "Email": "daniel@gmail.com",
+      "NomeUsuario": "Danielv",
+      "Cargo": 2,
+      "Senha": "222@xxx"
+    }
+  ]

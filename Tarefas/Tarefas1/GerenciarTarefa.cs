@@ -182,7 +182,7 @@ namespace Sistema.Tarefas1
             string descricao = Console.ReadLine()!;
 
             DateTime prazo = DateTime.MinValue;
-
+            ultimoIdUtilizado++;
             Tarefa novaTarefa = new Tarefa(ultimoIdUtilizado,titulo, descricao, desenvolvedor.Nome, prazo);
             novaTarefa.Status = StatusTarefa.AprovacaoInicio; // Define o status inicial
 

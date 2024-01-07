@@ -15,12 +15,13 @@ namespace Sistema.Menu
             EstatisticasTarefas estatisticasTarefas = new EstatisticasTarefas();
             GerenciarTarefa gerenciarTarefa = new GerenciarTarefa();
             TarefasRelacionadas tarefasRelacionadas = new TarefasRelacionadas();
+            GerenciarUsuario gerenciarUsuario = new GerenciarUsuario(); 
 
             Console.Clear();
             Console.WriteLine("\nSelecione a ação desejada:");
             Console.WriteLine("1-Criar uma tarefa \n2-Ver tarefas para aprovar \n3-Aprovar tarefa " +
                 "\n4-Exibir todas as tarefas \n5-Assumir tarefa \n6-Adicionar prazo na tarefa " +
-                "\n7-Estatisticas das tarefas \n8-Relacionar Tarefas");
+                "\n7-Estatisticas das tarefas \n8-Relacionar Tarefas \n9-Criar Usuario \n10-Fazer logout");
             int acao;
             while (!int.TryParse(Console.ReadLine(), out acao))
             {
@@ -134,10 +135,20 @@ namespace Sistema.Menu
                     Console.ReadLine();
                     MenuTechLeader(techLeader);
                     return;
+
+                case 9:
+                    gerenciarUsuario.CriarUsuario();
+                    Console.WriteLine($"\nPrecione [ENTER] para voltar");
+                    Console.ReadLine();
+                    MenuTechLeader(techLeader);
+                    return;
+
+                case 10:
+                    techLeader.Logout();
+                    Usuario.FazerLogin();
+                    return;
             }
-
         }
-
         public static void MenuDesenvolvedor(Usuario desenvolvedor)
         {
             TarefasRelacionadas tarefasRelacionadas = new TarefasRelacionadas();
@@ -165,6 +176,11 @@ namespace Sistema.Menu
                     Console.WriteLine($"\nPrecione [ENTER] para voltar");
                     Console.ReadLine();
                     MenuDesenvolvedor(desenvolvedor);
+                    return;
+
+                case 3:
+                    desenvolvedor.Logout();
+                    Usuario.FazerLogin();
                     return;
             }
         }
