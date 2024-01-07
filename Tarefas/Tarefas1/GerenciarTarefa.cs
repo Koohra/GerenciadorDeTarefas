@@ -150,7 +150,47 @@ namespace Sistema.Tarefas1
             }
         }
 
+        public void ExibirTarefasParaDesenvolvedor(string nomeDesenvolvedor)
+        {
+            List<Tarefa> tarefasDesenvolvedor = Tarefa
+                .Where(tarefa => tarefa.Responsavel.Equals(nomeDesenvolvedor) || tarefa.TarefasRelacionadasIds.Contains(tarefa.Id))
+                .ToList();
 
+            Console.WriteLine($"Lista de Tarefas para o Desenvolvedor {nomeDesenvolvedor}:\n");
+
+            foreach (var tarefa in tarefasDesenvolvedor)
+            {
+                Console.WriteLine($"ID: {tarefa.Id}");
+                Console.WriteLine($"Título: {tarefa.Titulo}");
+                Console.WriteLine($"Descrição: {tarefa.Descricao}");
+                Console.WriteLine($"Responsável: {tarefa.Responsavel}");
+                Console.WriteLine($"Prazo: {tarefa.Prazo}");
+                Console.WriteLine($"Status: {tarefa.Status}");
+                Console.WriteLine($"Aprovada: {(tarefa.Aprovada ? "Sim" : "Não")}");
+                Console.WriteLine("-------------------------------");
+            }
+        }
+
+        public void CriarTarefaDesenvolvedor(Usuario desenvolvedor)
+        {
+            Console.WriteLine($"Criar tarefa para {desenvolvedor.Nome}:");
+
+            Console.WriteLine("Título da Tarefa:");
+            string titulo = Console.ReadLine()!;
+
+            Console.WriteLine("Descrição da Tarefa:");
+            string descricao = Console.ReadLine()!;
+
+            DateTime prazo = DateTime.MinValue;
+
+            Tarefa novaTarefa = new Tarefa(ultimoIdUtilizado,titulo, descricao, desenvolvedor.Nome, prazo);
+            novaTarefa.Status = StatusTarefa.AprovacaoInicio; // Define o status inicial
+
+            Tarefa.Add(novaTarefa);
+            Console.WriteLine("Tarefa criada com sucesso pelo desenvolvedor.");
+            tarefaService.SalvarJsonTarefa(Tarefa);
+        }
     }
 }
+
 

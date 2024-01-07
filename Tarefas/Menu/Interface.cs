@@ -14,16 +14,19 @@ namespace Sistema.Menu
         {
             EstatisticasTarefas estatisticasTarefas = new EstatisticasTarefas();
             GerenciarTarefa gerenciarTarefa = new GerenciarTarefa();
+            TarefasRelacionadas tarefasRelacionadas = new TarefasRelacionadas();
+
             Console.Clear();
             Console.WriteLine("\nSelecione a ação desejada:");
             Console.WriteLine("1-Criar uma tarefa \n2-Ver tarefas para aprovar \n3-Aprovar tarefa " +
-                "\n4-Exibir todas as tarefas \n5-Assumir tarefa \n6-Adicionar prazo na tarefa \n7-Estatisticas das tarefas.");
+                "\n4-Exibir todas as tarefas \n5-Assumir tarefa \n6-Adicionar prazo na tarefa " +
+                "\n7-Estatisticas das tarefas \n8-Relacionar Tarefas");
             int acao;
             while (!int.TryParse(Console.ReadLine(), out acao))
             {
                 Console.Write("Digite o número correspondente a ação");
             }
-            switch (acao) 
+            switch (acao)
             {
                 case 1:
                     gerenciarTarefa.CriarTarefaTechLeader();
@@ -108,8 +111,62 @@ namespace Sistema.Menu
                     Console.ReadLine();
                     MenuTechLeader(techLeader);
                     return;
+                
+                case 8:
+                    Console.WriteLine("Escolha o ID da tarefa Principal:");
+                    if (int.TryParse(Console.ReadLine(), out int tarefaPrincipalId))
+                    {
+                        Console.WriteLine("Escolha o ID da tarefa que deseja relacionar:");
+                        if (int.TryParse(Console.ReadLine(), out int tarefaRelacionadaId))
+                        {
+                            tarefasRelacionadas.AdicionarTarefaRelacionada(tarefaPrincipalId, tarefaRelacionadaId);
+                        }
+                        else
+                        {
+                            Console.WriteLine("ID da tarefa relacionada inválido. Digite um número válido.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("ID da tarefa principal inválido. Digite um número válido.");
+                    }
+                    Console.WriteLine($"\nPrecione [ENTER] para voltar");
+                    Console.ReadLine();
+                    MenuTechLeader(techLeader);
+                    return;
             }
 
+        }
+
+        public static void MenuDesenvolvedor(Usuario desenvolvedor)
+        {
+            TarefasRelacionadas tarefasRelacionadas = new TarefasRelacionadas();
+            GerenciarTarefa gerenciarTarefa = new GerenciarTarefa();
+
+            Console.Clear();
+            Console.WriteLine("\nSelecione a ação desejada:");
+            Console.WriteLine("1-Exibir suas tarefas e relacionadas \n2-Criar uma tarefa");
+            int acao;
+            while (!int.TryParse(Console.ReadLine(), out acao))
+            {
+                Console.Write("Digite o número correspondente a ação");
+            }
+            switch (acao)
+            {
+                case 1:
+                    tarefasRelacionadas.ExibirTarefasPorDesenvolvedorNoTerminal(desenvolvedor);
+                    Console.WriteLine($"\nPrecione [ENTER] para voltar");
+                    Console.ReadLine();
+                    MenuDesenvolvedor(desenvolvedor);
+                    return;
+
+                case 2:
+                    gerenciarTarefa.CriarTarefaDesenvolvedor(desenvolvedor);
+                    Console.WriteLine($"\nPrecione [ENTER] para voltar");
+                    Console.ReadLine();
+                    MenuDesenvolvedor(desenvolvedor);
+                    return;
+            }
         }
     }
 }

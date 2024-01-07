@@ -87,14 +87,13 @@ namespace Sistema.Usuarios
                     {
                         Thread.Sleep(1500);
                         Console.Clear();
-                        Console.WriteLine("Você é um TechLeader");
                         Interface.MenuTechLeader(usuario);
                     }
                     else
                     {
                         Thread.Sleep(1500);
                         Console.Clear();
-                        //Chamar a interface do desenvolvedor
+                        Interface.MenuDesenvolvedor(usuario);
                     }
                 }
                 else

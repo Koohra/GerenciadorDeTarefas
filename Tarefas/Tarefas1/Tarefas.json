@@ -14,10 +14,12 @@
     "Prazo": "2024-01-07T00:00:00",
     "Titulo": "Teste Tarefas",
     "Descricao": "Testando para ver se a lista fica atualizada",
-    "Responsavel": "Miguel",
+    "Responsavel": "Julia",
     "Status": 7,
     "Aprovada": true,
-    "TarefasRelacionadasIds": []
+    "TarefasRelacionadasIds": [
+      8
+    ]
   },
   {
     "Id": 7,
@@ -27,7 +29,9 @@
     "Responsavel": "Camila",
     "Status": 6,
     "Aprovada": false,
-    "TarefasRelacionadasIds": []
+    "TarefasRelacionadasIds": [
+      9
+    ]
   },
   {
     "Id": 8,
@@ -37,7 +41,9 @@
     "Responsavel": "Miguel",
     "Status": 6,
     "Aprovada": false,
-    "TarefasRelacionadasIds": []
+    "TarefasRelacionadasIds": [
+      6
+    ]
   },
   {
     "Id": 9,
@@ -47,7 +53,9 @@
     "Responsavel": "Miguel",
     "Status": 6,
     "Aprovada": false,
-    "TarefasRelacionadasIds": []
+    "TarefasRelacionadasIds": [
+      7
+    ]
   },
   {
     "Id": 10,
