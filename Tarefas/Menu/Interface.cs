@@ -26,10 +26,16 @@ namespace Sistema.Menu
             {
                 case 1:
                     gerenciarTarefa.CriarTarefaTechLeader();
+                    Console.WriteLine($"\nPrecione [ENTER] para voltar");
+                    Console.ReadLine();
+                    MenuTechLeader(techLeader);
                     return;
 
                 case 2:
                     gerenciarTarefa.VerTarefasParaAprovar();
+                    Console.WriteLine($"\nPrecione [ENTER] para voltar");
+                    Console.ReadLine();
+                    MenuTechLeader(techLeader);
                     return;
 
                 case 3:
@@ -42,10 +48,16 @@ namespace Sistema.Menu
                     {
                         Console.WriteLine("ID inválido. Digite um número válido para o ID da tarefa.");
                     }
+                    Console.WriteLine($"\nPrecione [ENTER] para voltar");
+                    Console.ReadLine();
+                    MenuTechLeader(techLeader);
                     return;
 
                 case 4:
                     gerenciarTarefa.ExibirTarefas();
+                    Console.WriteLine($"\nPrecione [ENTER] para voltar");
+                    Console.ReadLine();
+                    MenuTechLeader(techLeader);
                     return;
 
                 case 5:
@@ -61,6 +73,9 @@ namespace Sistema.Menu
                     {
                         Console.WriteLine("ID inválido. Digite um número válido para o ID da tarefa.");
                     }
+                    Console.WriteLine($"\nPrecione [ENTER] para voltar");
+                    Console.ReadLine();
+                    MenuTechLeader(techLeader);
                     return;
 
                 case 6:
@@ -81,6 +96,9 @@ namespace Sistema.Menu
                     {
                         Console.WriteLine("ID inválido. Digite um número válido para o ID da tarefa.");
                     }
+                    Console.WriteLine($"\nPrecione [ENTER] para voltar");
+                    Console.ReadLine();
+                    MenuTechLeader(techLeader);
                     return;
             }
 

@@ -10,13 +10,13 @@
     "TarefasRelacionadasIds": []
   },
   {
-    "Id": 0,
+    "Id": 1,
     "Prazo": "2024-01-07T00:00:00",
     "Titulo": "Teste Tarefas",
     "Descricao": "Testando para ver se a lista fica atualizada",
     "Responsavel": "Miguel",
-    "Status": 6,
-    "Aprovada": false,
+    "Status": 7,
+    "Aprovada": true,
     "TarefasRelacionadasIds": []
   }
 ]

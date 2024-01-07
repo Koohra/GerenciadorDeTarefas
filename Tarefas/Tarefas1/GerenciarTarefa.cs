@@ -54,14 +54,15 @@ namespace Sistema.Tarefas1
         }
         public void AprovarTarefaPorId(int idTarefa)
         {
-            List<Tarefa> listaDeTarefas = ReceberTarefas();
-            Tarefa tarefa = listaDeTarefas.FirstOrDefault(t => t.Id == idTarefa)!;
+            ReceberTarefas();
+            Tarefa tarefa = Tarefa.FirstOrDefault(t => t.Id == idTarefa)!;
 
             if (tarefa != null)
             {
                 tarefa.Aprovada = true;
                 tarefa.Status = StatusTarefa.Pendente;
                 Console.WriteLine($"A tarefa '{tarefa.Titulo}' foi aprovada com sucesso.");
+                tarefaService.SalvarJsonTarefa(Tarefa);
             }
             else
             {
